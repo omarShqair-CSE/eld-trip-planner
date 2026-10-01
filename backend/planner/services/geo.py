@@ -21,7 +21,7 @@ class GeoError(Exception):
 def geocode(query):
     resp = requests.get(
         f"{NOMINATIM}/search",
-        params={"q": query, "format": "jsonv2", "limit": 1, "countrycodes": "us"},
+        params={"q": query, "format": "jsonv2", "limit": 1},
         headers=HEADERS,
         timeout=10,
     )
