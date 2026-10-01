@@ -6,7 +6,7 @@ const ROWS = [
   ["D", "Driving"],
   ["ON", "On Duty (not driving)"],
 ];
-const X0 = 120;   // left edge of the grid
+const X0 = 160;   // left edge of the grid
 const HW = 30;    // width of one hour
 const Y0 = 44;    // top edge of the grid
 const RH = 38;    // height of one row
@@ -45,7 +45,7 @@ export default function LogSheet({ log, details }) {
         <Field label="Shipping documents / commodity" value={details.shipping} />
       </div>
 
-      <svg viewBox="0 0 900 235" className="grid" role="img" aria-label="Duty status graph">
+      <svg viewBox="0 0 960 235" className="grid" role="img" aria-label="Duty status graph">
         {Array.from({ length: 25 }, (_, h) => (
           <text key={h} x={x(h)} y={Y0 - 10} textAnchor="middle" className="hl">
             {h === 0 || h === 24 ? "Mid" : h === 12 ? "Noon" : h % 12}
